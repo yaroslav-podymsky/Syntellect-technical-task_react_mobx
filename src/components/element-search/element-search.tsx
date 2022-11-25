@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { getCountryByName } from "../../api/apiService";
 import "./element-search.css";
-type TProps = {};
+type TProps = { maxElCount: number };
 type IElementList = {
 	flag: string;
 	fullName: string;
 	name: string;
 };
-function ElementSearch({}: TProps) {
+function ElementSearch({ maxElCount }: TProps) {
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [elementList, setElementList] = useState<IElementList[]>([]);
-	const [hintsCount, setHintsCount] = useState<number>(3);
+	const [hintsCount, setHintsCount] = useState<number>(1);
 	const [countryFlag, setCountryFlag] = useState<string>();
 
 	function getElementList() {
@@ -23,7 +23,6 @@ function ElementSearch({}: TProps) {
 			<div style={{ display: "flex" }}>
 				<div style={{ position: "relative" }}>
 					<input
-						// placeholder="Text"
 						ref={inputRef}
 						onChange={getElementList}
 						className="element-search__input"
@@ -36,10 +35,13 @@ function ElementSearch({}: TProps) {
 					value={hintsCount}
 					autoComplete="off"
 					type="number"
+					min="0"
+					max={maxElCount}
 					onChange={(e) => {
 						setHintsCount(e.target.valueAsNumber);
 					}}
 					className="element-search__hints-count"
+					// disabled={hintsCount > maxElCount - 1}
 				></input>
 			</div>
 			{elementList.length !== 0 && hintsCount > 0 ? (
@@ -48,6 +50,7 @@ function ElementSearch({}: TProps) {
 						if (index < hintsCount)
 							return (
 								<div
+									key={el.name}
 									onClick={() => {
 										if (inputRef.current?.value) {
 											inputRef.current.value = `${el.name} ${el.fullName}`;

@@ -47,7 +47,10 @@ function App() {
 					},
 				]}
 			/>
-			<ElementSearch />
+			<div className="app__element-search-block">
+				<ElementSearch maxElCount={3} />
+				<ElementSearch maxElCount={10} />
+			</div>
 		</div>
 	);
 }
