@@ -1,65 +1,64 @@
 .button-mapper {
-    border: 3px solid rgba(9, 5, 233, 0.075);
-    background-color: rgba(23, 76, 189, 0.151);
-    border-radius: 20px;
-    width: 450px;
-    min-height: 150px;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 20px;
+  border: 3px solid rgba(9, 5, 233, 0.075);
+  background-color: rgba(23, 76, 189, 0.151);
+  border-radius: 20px;
+  width: 450px;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px;
 }
 .button-mapper__input {
-    background-color: rgb(186, 176, 235);
-    border: 2px solid rgb(157, 142, 236);
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: .2s;
-    margin: 10px;
-    /* text-transform: uppercase; */
-    font-weight: 700;
-    
+  background-color: rgb(186, 176, 235);
+  border: 2px solid rgb(157, 142, 236);
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 10px;
+  /* text-transform: uppercase; */
+  font-weight: 700;
 }
 .button-mapper__input:hover {
-    border: 2px solid rgb(135, 115, 240);
+  border: 2px solid rgb(135, 115, 240);
 }
 
 .button-mapper__input:focus-visible {
-    border: 2px solid rgb(157, 142, 236);
+  border: 2px solid rgb(157, 142, 236);
 }
 .button-mapper__buttons {
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .button-mapper__button {
-    text-transform: uppercase;
-    color: rgb(85, 80, 80);
-    font-weight: 700;
-    font-size:12px;
-    width: 100px;
-    border-radius: 10px;
-    height: 40px;
-    background-color: rgb(186, 176, 235);
-    border: 2px solid rgb(157, 142, 236);
-    margin: 10px;
-    cursor: pointer;
-    transition: .2s;
-    padding: 2px;
+  text-transform: uppercase;
+  color: rgb(85, 80, 80);
+  font-weight: 700;
+  font-size: 12px;
+  width: 100px;
+  border-radius: 10px;
+  height: 40px;
+  background-color: rgb(186, 176, 235);
+  border: 2px solid rgb(157, 142, 236);
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 2px;
 }
 .button-mapper__button:hover {
-    /* background-color: rgba(23, 76, 189, 0.397); */
-    font-weight: 900;
-    color: black;
-    border: 2px solid rgb(135, 115, 240);
-    /* background-color: rgb(142, 124, 230); */
+  /* background-color: rgba(23, 76, 189, 0.397); */
+  font-weight: 900;
+  color: black;
+  border: 2px solid rgb(135, 115, 240);
+  /* background-color: rgb(142, 124, 230); */
 }
 .button-mapper__button:active {
-    border: 1px solid  rgb(135, 115, 240);
+  border: 1px solid rgb(135, 115, 240);
 }

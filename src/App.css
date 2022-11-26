@@ -1,11 +1,11 @@
 .app {
-    background-color: rgba(29, 73, 218, 0.151);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
+  background-color: rgba(29, 73, 218, 0.151);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
 }
 .app__element-search-block {
-    display: flex;
+  display: flex;
 }
